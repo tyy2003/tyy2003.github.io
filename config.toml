@@ -45,7 +45,7 @@ theme = "FixIt"
     desktopMode = "sticky"
     mobileMode = "auto"
     [params.header.title]
-      logo = ""
+      logo = "https://raw.githubusercontent.com/tyy2003/tyy2003.github.io/master/static/img/logo.jpg"
       name = "Tany's Blog"
       pre = ""
       post = ""
