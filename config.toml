@@ -1,0 +1,602 @@
+title = "Tany's Blog"
+baseURL = "https://tyy2003.github.io/"
+defaultContentLanguage = "zh-cn"
+languageCode = "zh-CN"
+hasCJKLanguage = true
+theme = "FixIt"
+
+[author]
+  name = "Tany"
+  email = "tany2003@qq.com"
+  link = "https://github.com/tyy2003"
+
+[params]
+  version = "0.2.X"
+  description = "这是Tany的博客"
+  keywords = ["Blog", "Tany"]
+  defaultTheme = "auto"
+  enableGitInfo = true
+  gitRepo = "https://github.com/tyy2003/tyy2003.github.io"
+  images = ["/static/img/logo.png"]
+  enablePWA = true
+  externalIcon = false
+  disableThemeInject = false
+  
+  [params.home]
+    rss = 10
+    [params.home.profile]
+      enable = true
+      title = "Tany's Blog"
+      subtitle = "我上的不是大学，我读的还是高中。"
+      typeit = true
+      gravatarEmail = "tany2003@qq.com"
+      avatarURL = ""
+      social = true
+    [params.home.posts]
+      enable = true
+      paginate = 6
+
+  [params.social]
+    Github = "tyy2003"
+    Bilibili = "599541138"
+    Email = "tany2003@qq.com"
+
+  [params.header]
+    desktopMode = "sticky"
+    mobileMode = "auto"
+    [params.header.title]
+      logo = ""
+      name = "Tany's Blog"
+      pre = ""
+      post = ""
+      typeit = false
+      [params.header.subtitle]
+        name = ""
+        typeit = false
+
+
+  [params.app]
+    title = "Tany"
+    noFavicon = false
+    svgFavicon = ""
+    iconColor = "#5bbad5"
+    tileColor = "#da532c"
+    [params.app.themeColor]
+      light = "#f8f8f8"
+      dark = "#252627"
+    
+  [params.search]
+      enable = true
+      type = "lunr"
+      contentLength = 4000
+      placeholder = ""
+      maxResultLength = 10
+      snippetLength = 50
+      highlightTag = "em"
+      absoluteURL = false
+      [params.search.algolia]
+        index = ""
+        appID = ""
+        searchKey = ""
+  
+  [params.section]
+    paginate = 10
+    dateFormat = "01-02"
+    rss = 10
+    [params.section.recentlyUpdated]
+      enable = false
+      rss = false
+      days = 30
+      maxCount = 10
+
+  [params.list]
+    paginate = 20
+    dateFormat = "01-03"
+    rss = 10
+
+  [params.tagcloud]
+    enable = false
+    min = 14
+    max = 32
+    peakCount = 10
+    orderby = "name" 
+
+  [params.footer]
+    enable = true
+    hugo = true
+    copyright = true
+    author = true
+    since = 2022
+    siteTime = "2022-12-14T20:13:14+08:00"
+    wordCount = true
+    gov = ""
+    icp = ""
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    # 你可以在名称（允许 HTML 格式）之前添加其他信息，例如图标
+    pre = ""
+    # 你可以在名称（允许 HTML 格式）之后添加其他信息，例如图标
+    post = ""
+    name = "文章"
+    url = "/posts/"
+    # 当你将鼠标悬停在此菜单链接上时，将显示的标题
+    title = ""
+    weight = 1
+    # 向菜单项添加用户定义的内容
+    [menu.main.params]
+      # 添加 CSS 类到菜单项
+      class = ""
+      # 是否为草稿菜单，类似草稿页面
+      draft = false
+      # 添加 fontawesome 图标到菜单项
+      icon = "fa-solid fa-archive"
+      # 设置菜单项类型，可选值：["mobile", "desktop"]
+      type = ""
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "分类"
+    url = "/categories/"
+    title = ""
+    weight = 2
+    [menu.main.params]
+      icon = "fa-solid fa-th"
+  [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "标签"
+    url = "/tags/"
+    title = ""
+    weight = 3
+    [menu.main.params]
+      icon = "fa-solid fa-tags"
+[params.page]
+    # FixIt 0.2.0 | 新增 是否在主页隐藏一篇文章
+    hiddenFromHomePage = false
+    # FixIt 0.2.0 | 新增 是否在搜索结果中隐藏一篇文章
+    hiddenFromSearch = false
+    # FixIt 0.2.0 | 新增 是否使用 twemoji
+    twemoji = false
+    # 是否使用 lightgallery
+    lightgallery = false
+    # FixIt 0.2.0 | 新增 是否使用 ruby 扩展语法
+    ruby = true
+    # FixIt 0.2.0 | 新增 是否使用 fraction 扩展语法
+    fraction = true
+    # FixIt 0.2.0 | 新增 是否使用 fontawesome 扩展语法
+    fontawesome = true
+    # 许可协议信息（支持 HTML 格式）
+    license = '<a rel="license external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>'
+    # 是否在文章页面显示原始 Markdown 文档链接
+    linkToMarkdown = true
+    # FixIt 0.2.4 | 新增 是否在 RSS 中显示全文内容
+    rssFullText = false
+    # FixIt 0.2.13 | 新增 页面样式 ["narrow", "normal", "wide", ...]
+    pageStyle = "normal"
+    # FixIt 0.2.14 | 新增 强制使用 Gravatar 作为作者头像
+    gravatarForce = false
+    # FixIt 0.2.17 | 更改 开启自动书签支持
+    # 如果为 true，则在关闭页面时保存阅读进度
+    autoBookmark = false
+    # FixIt 0.2.17 | 新增 是否使用 字数统计
+    wordCount = true
+    # FixIt 0.2.17 | 新增 是否使用 预计阅读
+    readingTime = true
+    # FixIt 0.2.17 | 新增 文章结束标志
+    endFlag = ""
+
+    # FixIt 0.2.15 | 新增 转载配置
+    [params.page.repost]
+      enable = false
+      url = ""
+    # FixIt 0.2.0 | 新增 目录配置
+    [params.page.toc]
+      # 是否使用目录
+      enable = true
+      # FixIt 0.2.9 | 新增 是否保持使用文章前面的静态目录
+      keepStatic = false
+      # 是否使侧边目录自动折叠展开
+      auto = true
+      # FixIt 0.2.13 | 新增 目录位置 ["left", "right"]
+      position = "right"
+    # FixIt 0.2.13 | 新增 在文章开头显示提示信息，提醒读者文章内容可能过时
+    [params.page.expirationReminder]
+      enable = false
+      # 如果文章最后更新于这天数之前，显示提醒
+      reminder = 90
+      # 如果文章最后更新于这天数之前，显示警告
+      warning = 180
+      # 如果文章到期是否关闭评论
+      closeComment = false
+    # FixIt 0.2.0 | 新增 代码配置
+    [params.page.code]
+      # 是否显示代码块的复制按钮
+      copy = true
+      # FixIt 0.2.13 | 新增 是否显示代码块的编辑按钮
+      edit = true
+      # 默认展开显示的代码行数
+      maxShownLines = 10
+    # FixIt 0.2.14 | 新增 文章编辑
+    [params.page.edit]
+      enable = false
+      # FixIt 0.2.15 | 更改 编辑的基础链接
+      # url = "/edit/branch-name/subdirectory-name" # 相对于 `params.gitRepo`
+      # url = "https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name" # 完整链接
+      url = ""
+    # FixIt 0.2.0 | 更改 KaTeX 数学公式 (https://katex.org)
+    [params.page.math]
+      enable = true
+      # 默认行内定界符是 $ ... $ 和 \( ... \)
+      inlineLeftDelimiter = ""
+      inlineRightDelimiter = ""
+      # 默认块定界符是 $$ ... $$, \[ ... \],  \begin{equation} ... \end{equation} 和一些其它的函数
+      blockLeftDelimiter = ""
+      blockRightDelimiter = ""
+      # KaTeX 插件 copy_tex
+      copyTex = true
+      # KaTeX 插件 mhchem
+      mhchem = true
+    # FixIt 0.2.0 | 新增 Mapbox GL JS 配置 (https://docs.mapbox.com/mapbox-gl-js)
+    [params.page.mapbox]
+      # Mapbox GL JS 的 access token
+      accessToken = ""
+      # 浅色主题的地图样式
+      lightStyle = "mapbox://styles/mapbox/light-v9"
+      # 深色主题的地图样式
+      darkStyle = "mapbox://styles/mapbox/dark-v9"
+      # 是否添加 NavigationControl
+      navigation = true
+      # 是否添加 GeolocateControl
+      geolocate = true
+      # 是否添加 ScaleControl
+      scale = true
+      # 是否添加 FullscreenControl
+      fullscreen = true
+    # FixIt 0.2.17 | 新增 赞赏设置
+    [params.page.reward]
+      enable = false
+      animation = false
+      # 相对于页脚的位置，可选值：["before", "after"]
+      position = "after"
+      # comment = "Buy me a coffee"
+      [params.page.reward.ways]
+        # wechatpay = "/images/wechatpay.png"
+        # alipay = "/images/alipay.png"
+        # paypal = "/images/paypal.png"
+        # bitcoin = "/images/bitcoin.png"
+    # FixIt 0.2.0 | 更改 文章页面的分享信息设置
+    [params.page.share]
+      enable = true
+      Twitter = true
+      Facebook = true
+      Linkedin = false
+      Whatsapp = true
+      Pinterest = false
+      Tumblr = false
+      HackerNews = false
+      Reddit = false
+      VK = false
+      Buffer = false
+      Xing = false
+      Line = true
+      Instapaper = false
+      Pocket = false
+      Digg = false
+      Stumbleupon = false
+      Flipboard = false
+      Weibo = true
+      Renren = false
+      Myspace = true
+      Blogger = true
+      Baidu = false
+      Odnoklassniki = false
+      Evernote = true
+      Skype = false
+      Trello = false
+      Mix = false
+    # FixIt 0.2.15 | 更改 评论系统设置
+    [params.page.comment]
+      enable = false
+      # FixIt 0.2.13 | 新增 Artalk 评论系统设置 (https://artalk.js.org/)
+      [params.page.comment.artalk]
+        enable = false
+        server = "https://yourdomain/api/"
+        site = "默认站点"
+        placeholder = ""
+        noComment = ""
+        sendBtn = ""
+        editorTravel = true
+        flatMode = "auto"
+        maxNesting = 3
+        # 当 `params.page.lightgallery` 启用时生效
+        lightgallery = false
+        locale = "" # FixIt 0.2.15 | 新增
+      # FixIt 0.1.1 | 新增 Disqus 评论系统设置 (https://disqus.com)
+      [params.page.comment.disqus]
+        enable = false
+        # Disqus 的 shortname，用来在文章中启用 Disqus 评论系统
+        shortname = ""
+      # FixIt 0.1.1 | 新增 Gitalk 评论系统设置 (https://github.com/gitalk/gitalk)
+      [params.page.comment.gitalk]
+        enable = false
+        owner = ""
+        repo = ""
+        clientId = ""
+        clientSecret = ""
+      # Valine 评论系统设置 (https://github.com/xCss/Valine)
+      [params.page.comment.valine]
+        enable = false
+        appId = ""
+        appKey = ""
+        placeholder = ""
+        avatar = "mp"
+        meta= ""
+        pageSize = 10
+        lang = ""
+        visitor = true
+        recordIP = true
+        highlight = true
+        enableQQ = false
+        serverURLs = ""
+        # FixIt 0.2.6 | 新增 emoji 数据文件名称，默认是 "google.yml"
+        # ["apple.yml", "google.yml", "facebook.yml", "twitter.yml"]
+        # 位于 "themes/FixIt/assets/lib/valine/emoji/" 目录
+        # 可以在你的项目下相同路径存放你自己的数据文件：
+        # "assets/lib/valine/emoji/"
+        emoji = ""
+        commentCount = true # FixIt 0.2.13 | 新增
+      # FixIt 0.2.16 | 更改 Waline 评论系统设置 (https://waline.js.org)
+      [params.page.comment.waline]
+        enable = false
+        serverURL = ""
+        pageview = false # FixIt 0.2.15 | 新增
+        emoji = ["//unpkg.com/@waline/emojis@1.1.0/weibo"]
+        meta = ["nick", "mail", "link"]
+        requiredMeta = []
+        login = "enable"
+        wordLimit = 0
+        pageSize = 10
+        imageUploader = false # FixIt 0.2.15 | 新增
+        highlighter = false # FixIt 0.2.15 | 新增
+        comment = false # FixIt 0.2.15 | 新增
+        texRenderer = false # FixIt 0.2.16 | 新增
+        search = false # FixIt 0.2.16 | 新增
+        recaptchaV3Key = "" # FixIt 0.2.16 | 新增
+      # Facebook 评论系统设置 (https://developers.facebook.com/docs/plugins/comments)
+      [params.page.comment.facebook]
+        enable = false
+        width = "100%"
+        numPosts = 10
+        appId = ""
+        languageCode = "zh_CN"
+      # FixIt 0.2.0 | 新增 Telegram Comments 评论系统设置 (https://comments.app)
+      [params.page.comment.telegram]
+        enable = false
+        siteID = ""
+        limit = 5
+        height = ""
+        color = ""
+        colorful = true
+        dislikes = false
+        outlined = false
+      # FixIt 0.2.0 | 新增 Commento 评论系统设置 (https://commento.io)
+      [params.page.comment.commento]
+        enable = false
+      # FixIt 0.2.5 | 新增 Utterances 评论系统设置 (https://utteranc.es)
+      [params.page.comment.utterances]
+        enable = false
+        # owner/repo
+        repo = ""
+        issueTerm = "pathname"
+        label = ""
+        lightTheme = "github-light"
+        darkTheme = "github-dark"
+      # FixIt 0.2.13 | 新增 Twikoo 评论系统设置 (https://twikoo.js.org/)
+      [params.page.comment.twikoo]
+        enable = false
+        envId = ""
+        region = ""
+        path = ""
+        visitor = true
+        commentCount = true
+        # 当 `params.page.lightgallery` 启用时生效
+        lightgallery = false
+      # FixIt 0.2.14 | 新增 Giscus 评论系统设置
+      [params.page.comment.giscus]
+        enable = false
+        repo = ""
+        repoId = ""
+        category = ""
+        categoryId = ""
+        mapping = ""
+        reactionsEnabled = "1"
+        emitMetadata = "0"
+        inputPosition = "bottom" # top, bottom
+        lightTheme = "light"
+        darkTheme = "dark"
+        lazyLoad = true
+    # FixIt 0.2.7 | 新增 第三方库配置
+    [params.page.library]
+      [params.page.library.css]
+        # someCSS = "some.css"
+        # 位于 "assets/"
+        # 或者
+        # someCSS = "https://cdn.example.com/some.css"
+      [params.page.library.js]
+        # someJavascript = "some.js"
+        # 位于 "assets/"
+        # 或者
+        # someJavascript = "https://cdn.example.com/some.js"
+    # FixIt 0.2.10 | 更改 页面 SEO 配置
+    [params.page.seo]
+      # 图片 URL
+      images = []
+      # 出版者信息
+      [params.page.seo.publisher]
+        name = ""
+        logoUrl = ""
+# TypeIt 配置
+[params.typeit]
+    # 每一步的打字速度（单位是毫秒）
+    speed = 100
+    # 光标的闪烁速度（单位是毫秒）
+    cursorSpeed = 1000
+    # 光标的字符（支持 HTML 格式）
+    cursorChar = "|"
+    # 打字结束之后光标的持续时间（单位是毫秒，"-1" 代表无限大）
+    duration = -1
+
+[params.ibruce]
+    enable = false
+    enablePost = false
+
+# Hugo 解析文档的配置
+[markup]
+  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    codeFences = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false 
+    guessSyntax = true
+
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      # 是否在文档中直接使用 HTML 标签
+      unsafe = true
+  # 目录设置
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 6
+
+# FixIt 0.2.14 | 新增 Gravatar 设置
+  [params.gravatar]
+    # Gravatar 主机，默认：“www.gravatar.com”
+    host = "www.gravatar.com" # ["cn.gravatar.com", "gravatar.loli.net", ...]
+    style = "" # ["", "mp", "identicon", "monsterid", "wavatar", "retro", "blank", "robohash"]
+
+# FixIt 0.2.16 | 新增 返回顶部
+  [params.backToTop]
+    enable = true
+    # 在 b2t 按钮中显示滚动百分比
+    scrollpercent = false
+
+  # FixIt 0.2.16 | 新增 阅读进度条
+  [params.readingProgress]
+    enable = false
+    # 可用值：["left", "right"]
+    start = "left"
+    # 可用值：["top", "bottom"]
+    position = "top"
+    reversed = false
+    light = ""
+    dark = ""
+    height = "2px"
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+[mediaTypes]
+  # 用于输出 Markdown 格式文档的设置
+  [mediaTypes."text/markdown"]
+    suffixes = ["md"]
+  # 用于输出 txt 格式文档的设置
+  [mediaTypes."text/plain"]
+    suffixes = ["txt"]
+
+[outputFormats]
+  # 用于输出 Markdown 格式文档的设置
+  [outputFormats.MarkDown]
+    mediaType = "text/markdown"
+    isPlainText = true
+    isHTML = false
+  # FixIt 0.2.15 | 新增 用于输出 baidu_urls.txt 文件的设置
+  [outputFormats.BaiduUrls]
+    baseName = "baidu_urls"
+    mediaType = "text/plain"
+    isPlainText = true
+    isHTML = false
+
+# FixIt 0.2.15 | 更改 用于 Hugo 输出文档的设置
+[outputs]
+  home = ["HTML", "RSS", "JSON", "BaiduUrls"]
+  page = ["HTML", "MarkDown"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML"]
+
+[languages]
+  [languages.en]
+    weight = 1
+    languageCode = "en"
+    languageName = "English"
+    [[languages.en.menu.main]]
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "Posts"
+      url = "/posts/"
+      title = ""
+      weight = 1
+    [[languages.en.menu.main]]
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "Tags"
+      url = "/tags/"
+      title = ""
+      weight = 2
+    [[languages.en.menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "Categories"
+      url = "/categories/"
+      title = ""
+      weight = 3
+
+  [languages.zh-cn]
+    weight = 2
+    # 网站语言，仅在这里 CN 大写
+    languageCode = "zh-CN"
+    languageName = "简体中文"
+    # 是否包括中日韩文字
+    hasCJKLanguage = true
+    [[languages.zh-cn.menu.main]]
+      identifier = "posts"
+      pre = ""
+      post = ""
+      name = "文章"
+      url = "/posts/"
+      title = ""
+      weight = 1
+    [[languages.zh-cn.menu.main]]
+      identifier = "tags"
+      pre = ""
+      post = ""
+      name = "标签"
+      url = "/tags/"
+      title = ""
+      weight = 2
+    [[languages.zh-cn.menu.main]]
+      identifier = "categories"
+      pre = ""
+      post = ""
+      name = "分类"
+      url = "/categories/"
+      title = ""
+      weight = 3
