@@ -30,7 +30,7 @@ theme = "FixIt"
       subtitle = "我上的不是大学，我读的还是高中。"
       typeit = true
       gravatarEmail = "tany2003@qq.com"
-      avatarURL = "https://raw.githubusercontent.com/tyy2003/tyy2003.github.io/master/static/img/logo.jpg"
+      avatarURL = "https://tyy.tanyaodan.com/img/logo.jpg"
       social = true
     [params.home.posts]
       enable = true
